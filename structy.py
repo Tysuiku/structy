@@ -131,3 +131,29 @@ def compress(s):
   return "".join(result)
 
 #--------------------------------------------------------------
+
+def anagrams(s1, s2):
+  return char_count(s1) == char_count(s2)
+  
+def char_count(s):
+  count = {}
+  
+  for char in s:
+    if char not in count:
+      count[char] = 0
+    
+    count[char] += 1
+    
+  return count
+
+# this solution uses a helper function to solve for anagrams
+# function is linear so O(n + m)
+
+from collections import Counter
+
+def anagrams(s1, s2):
+  return Counter(s1) == Counter(s2)
+
+#python specific built in modulo allows us to convert a string into a dictionary form 
+
+#--------------------------------------------------------------
