@@ -157,3 +157,27 @@ def anagrams(s1, s2):
 #python specific built in modulo allows us to convert a string into a dictionary form 
 
 #--------------------------------------------------------------
+#my solution
+def most_frequent_char(s):
+  count = char_count(s)
+  freq = 0
+  result = ""
+  
+  for char in s:
+    if count[char] > freq:
+      freq = count[char]
+      result = char
+      
+  return result
+
+def char_count(str):
+  count = {}
+  for char in str:
+    if char not in count: 
+      count[char] = 0
+      
+    count[char] += 1 
+    
+  return count
+
+#O(n) solution
