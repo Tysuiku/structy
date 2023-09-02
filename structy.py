@@ -196,3 +196,14 @@ def most_frequent_char(s):
   return best
 
 #--------------------------------------------------------------
+
+def pair_sum(numbers, target_sum):
+  prev = {}
+  
+  for index, num in enumerate(numbers):
+    comp = target_sum - num
+    
+    if comp in prev:
+      return (prev[comp], index)
+    
+    prev[num] = index
