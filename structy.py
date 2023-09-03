@@ -207,3 +207,6 @@ def pair_sum(numbers, target_sum):
       return (prev[comp], index)
     
     prev[num] = index
+
+#Time: O(n)
+#Space: O(n)
